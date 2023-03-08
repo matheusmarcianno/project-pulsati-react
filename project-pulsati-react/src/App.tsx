@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Header from "./pages/components/header/header";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <span>teste</span>
-  )
+    <div>
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;

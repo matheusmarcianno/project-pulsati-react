@@ -1,0 +1,7 @@
+.box-login {
+    background-color: '#cfe8fc'; 
+    height: "50vh"; 
+    width: '50vw';
+    display: 'flex'; 
+    justify-content: 'center';
+}
