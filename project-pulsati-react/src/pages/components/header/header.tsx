@@ -10,23 +10,23 @@ import { useState } from "react";
 import { Home } from "../../home/home";
 import { Login } from "../../login/login";
 
-export default function Header() {
-  const [currentPage, setCurrentPage] = useState("home");
 
-  function navigateTo(page: any) {
-    setCurrentPage(page);
-  }
+interface HeaderProps {
+  setCurrentPage: (currentPage: string) => void; 
+}
+
+export function Header(props: HeaderProps) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ background: "white" }} position="static">
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+      <AppBar sx={{  display: "flex", flexDirection:'row', alignItems: 'center', height: '10vh', background: "white" }} position="static">
+        <Toolbar sx={{ display: "flex", flexDirection:"row", width:'100vw', justifyContent: "space-between" }}>
           <div>
             <img src={logo} alt="" />
           </div>
 
           <Tabs>
-            <Tab onClick={() => navigateTo("home")} label="Home" />
+            <Tab onClick={() => props.setCurrentPage("home")} label="Home" />
             <Tab label="Sobre" />
             <Tab label="Serviços" />
             <Tab label="Comprar" />
@@ -34,16 +34,14 @@ export default function Header() {
           </Tabs>
 
           <div>
-            <Button onClick={() => navigateTo("login")} color="primary">
-              Login
+            <Button onClick={() => props.setCurrentPage("login")} color="primary">
+              Entrar
             </Button>
             <Button color="secondary">Registre-se</Button>
           </div>
 
         </Toolbar>
       </AppBar>
-        {currentPage === "login" && <Home />}
-        {currentPage === "login" && <Login />}
     </Box>
   );
 }

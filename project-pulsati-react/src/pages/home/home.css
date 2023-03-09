@@ -3,3 +3,50 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.home-body {
+    width: 100%s;
+    height: 100vh;
+    background-image: url("../../assets/backgroundV1.png");
+    background-size: cover;
+}
+
+.div-principal-phrase {
+    width: 1250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 65px
+}
+
+.div-slogan-phrase {
+    width: 950px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    color: grey
+}
+
+.div-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 55px;
+    gap: 20px
+}
+
+.div-footer-phrase {
+    display: flex;
+    position: relative;
+    top: 500px
+}
+
+.div-footer-slogan-phrase {
+    display: flex;
+    position: relative;
+    top: 550px;
+    justify-content: center;
+    text-align: center;
+    color: grey;
+    padding-bottom: 50px;
+}
